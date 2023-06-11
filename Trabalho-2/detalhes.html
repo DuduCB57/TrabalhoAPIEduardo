@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eCommerce Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/7a8355c733.js" crossorigin="anonymous"></script>
+    <script src="productPage.js"></script>
+</head>
+
+<body class="fundo">
+    <!--Seção Superior-->
+    <div class="container main-menu px-0">
+        <div class="row">
+            <!--Section 1-->
+            <a class="col-lg-2 col-md-2 col-sm-4 col-xs-4 logo" href="index.html">
+                <img src="imagens/logo.png" href="/Trabalho-2/index.html" alt="Logo" height=100px;>
+            </a>
+            <!--Section 2-->
+            <div class="col-6 d-none d-md-block">
+                <p>Welcome Guest!</p>
+                <!--Search box-->
+                <nav class="navbar">
+                    <div class="container-fluid">
+                        <form class="d-flex col" role="search" onsubmit="pesquisa(event)">
+                            <input class="form-control me-2" type="search"
+                                placeholder="Search for a product, Category, Sellers or Brand" aria-label="Search" id="search-input">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+
+            <!--Section 3-->
+            <div class="col-md-4 col-xs-6">
+                <!--Menu Navbar-->
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav">
+                                <a class="nav-link" href="#">Sign in</a>
+                                <a class="nav-link" href="#">Register</a>
+                                <a class="nav-link" href="#">My Account</a>
+                                <a class="nav-link" href="#">Track order</a>
+                                <div class="nav-link d-lg-none d-md-none">
+                                    <form class="d-flex" role="search" onsubmit="pesquisa(event)">
+                                      <input class="form-control" type="search" placeholder="Search Products" aria-label="Search" id="search-input-mobile">
+                                      <button class="btn btn-outline-success me-5" type="submit">Search</button>
+                                    </form>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="row">
+                    <!--Texto Navbar-->
+                    <p class="col-9 return d-none d-md-block">Cash on Delivery | 30 Day Return<br>24/7 Customer Service
+                        <strong>1800 00 11
+                            22</strong>
+                    </p>
+                    <!--Carrinho-->
+                    <button type="button" class="btn btn-primary position-relative col-3 cart d-none d-lg-block">
+                        <img src="imagens/Untitled design (18).png" alt="cart" height="30px">
+                        <p>My Cart</p>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            1
+                            <span class="visually-hidden">unread messages</span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--Final Seção Superior-->
+    <!--Seção Produto-->
+    <div id="secao-produto"></div>"
+    <!--Final Seção Produto-->
+</body>

@@ -1,0 +1,93 @@
+/* Seção Superior */
+
+.fundo {
+    background-color: lightgray;
+}
+
+.main-menu p {
+    font-size: 0.8rem;
+}
+
+.navbar {
+    font-size: 0.8rem;
+}
+
+.navbar-nav a {
+    color: darkblue;
+}
+
+.cart {
+    height: 6.3vh;
+    margin-left: -35px;
+}
+
+.meridional {
+    height: 700px;
+}
+
+.pesquisa {
+    margin-top: 0;
+}
+
+.carousel-indicators button {
+    color: darkblue;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: black;
+}
+
+.carousel-item {
+    height: 450px;
+    background-color: white;
+}
+.carousel-item img {
+    height: 23rem;
+    width: auto;
+    margin-bottom: 20rem;
+}
+.carousel-caption h5 {
+    color: black;
+}
+
+.cart {
+    border-left: 234px;
+}
+
+@media (max-width: 767px) {
+    .carousel-item {
+      height: 300px; /* New height for mobile screens */
+    }
+    .meridional {
+        padding-top: 0px;
+        padding-bottom: 60px;
+        height: 300px; /* New height for mobile screens */
+    }
+    .carousel-item img {
+        margin-top: 10px;
+    }
+    .logo {
+        width: 100%;
+    }
+    .meio {
+        padding-top: 20px;
+    }
+  }
+
+
+.card-title {
+    font-size: large;
+    font-weight: 600;
+}
+
+.product-page {
+    text-align: center;
+    > img {
+        height: 30rem;
+        width: auto;
+    }
+    .card-body p.price {
+        font-size: larger;
+        font-weight: 600;
+    }
+}

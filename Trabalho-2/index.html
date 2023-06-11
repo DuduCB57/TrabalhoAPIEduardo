@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eCommerce Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/7a8355c733.js" crossorigin="anonymous"></script>
+    <script src="products.js"></script>
+</head>
+
+<body class="fundo">
+    <!--Seção Superior-->
+    <div class="container main-menu px-0">
+        <div class="row">
+            <!--Section 1-->
+            <a class="col-lg-2 col-md-2 col-sm-4 col-xs-4 logo" href="index.html">
+            <img src="imagens/logo.png" href="/Trabalho-2/index.html" alt="Logo" height=100px;>
+        </a>
+            <!--Section 2-->
+            <div class="col-6 d-none d-md-block">
+                <p>Welcome Guest!</p>
+                <!--Search box-->
+                <nav class="navbar">
+                    <div class="container-fluid">
+                        <form class="d-flex col" role="search" onsubmit="pesquisa(event)">
+                            <input class="form-control me-2" type="search" placeholder="Search for a product" aria-label="Search" id="search-input">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+
+            <!--Section 3-->
+            <div class="col-md-4 col-xs-6">
+                <!--Menu Navbar-->
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav">
+                                <a class="nav-link" href="#">Sign in</a>
+                                <a class="nav-link" href="#">Register</a>
+                                <a class="nav-link" href="#">My Account</a>
+                                <a class="nav-link" href="#">Track order</a>
+                                <div class="nav-link d-lg-none d-md-none">
+                                    <form class="d-flex" role="search" onsubmit="pesquisa(event)">
+                                      <input class="form-control" type="search" placeholder="Search Products" aria-label="Search" id="search-input-mobile">
+                                      <button class="btn btn-outline-success me-5" type="submit">Search</button>
+                                    </form>
+                                  </div>                                  
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="row">
+                    <!--Texto Navbar-->
+                    <p class="col-9 return d-none d-md-block">Cash on Delivery | 30 Day Return<br>24/7 Customer Service
+                        <strong>1800 00 11
+                            22</strong>
+                    </p>
+                    <!--Carrinho-->
+                    <button type="button" class="btn btn-primary position-relative col-3 cart d-none d-lg-block">
+                        <img src="imagens/Untitled design (18).png" alt="cart" height="30px">
+                        <p>My Cart</p>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            1
+                            <span class="visually-hidden">unread messages</span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--Final Seção Superior-->
+
+
+    <!--Seção Meridional-->
+    <div class="row meridional px-5">
+        <!--Form Pesquisa-->
+        <form class="row g-3 col-3 m-auto d-none d-md-block" style="height: 450px" onsubmit="enviarForm(event)">
+            <p><strong>Quick Find - Choose product</strong></p>
+            <p>Select the category you wish to search for:</p>
+            <div class="col-md-12">
+                <select class="form-select" id="categories" aria-label="Default select example">
+                </select>
+            </div>
+            <div class="col-12">
+                <button type="submit" id="submitBtn" class="btn btn-primary col-md-12">Search</button>
+            </div>
+        </form>
+        <!--Carrousel-->
+        <div id="carouselExampleCaptions" class="carousel slide col-md-9 col-xs-12 m-auto">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="" class="mx-auto d-block mh-100 mw-100 carousel-img" alt="Tudor Watch" width="100%">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Placeholder</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="" class="mx-auto d-block mh-100 mw-100" alt="Seiko Watch" width="100%">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Placeholder</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="" class="mx-auto d-block mh-100 mw-100" alt="Tudor Watch" width="100%">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Placeholder</h5>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!--Final Seção Meridional-->
+
+
+    <!--Seção final-->
+    <div class="row meio">
+        <!--Cards Produtos-->
+        <div class="col-12 col-lg-8">
+            <div class="row row-cols-1 row-cols-lg-3 g-4" id="product-list"></div>
+        </div>
+
+        <!--Barra Lateral-->
+        <div class="col-4 p-5 d-none d-lg-block">
+            <!--Barra Lateral Reviews-->
+            <div>
+                <h4><strong>Most Reviewed Items</strong></h4>
+                <div class="card mb-3" id="produtosLaterais" style="max-width: 540px;">
+                </div>
+                <div class="">
+                    <button class="btn btn-primary col-md-4 pull-right">See more</button>
+                </div>
+            </div>
+
+            <!--Barra Lateral NewsLetter-->
+            <form class="py-5">
+                <h5><strong>NewsLetter</strong></h5>
+                <p>Sign up for our newsletter!</p>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <button type="submit" class="btn btn-primary pull-right">Join Now!</button>
+            </form>
+        </div>
+
+    </div>
+    <!--Final Seção final-->
+
+    <!--Footer-->
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-light text-muted">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+                <span>Get connected with us on social networks:</span>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="d-none d-md-block">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-gem me-3"></i>Payment Options
+                        </h6>
+                        <i class="fa-regular fa-credit-card"></i>
+                        <i class="fa-solid fa-money-bill-1"></i>
+                        <i class="fa-solid fa-money-check-dollar"></i>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 d-none d-md-block">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Quick Links
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Help</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Shipping Policy</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Returns</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">FAQ</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4 d-none d-md-block">
+                            Useful links
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Pricing</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Settings</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Orders</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Help</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Contact Us</h6>
+                        <p><i class="fas fa-home me-3"></i> Belo Horizonte, MG, BR</p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            eduardo@example.com
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+                        <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2021 Copyright: trabalhoFakeStore.com
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    <!--Final Footer-->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
